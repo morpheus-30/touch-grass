@@ -70,7 +70,3 @@ To remove Touch Grass CLI from your system:
 
 1. Delete the hidden vault: `rm -rf ~/.touch-grass`
 2. Open your `~/.bashrc` or `~/.zshrc` and delete the `🌿 TOUCH GRASS TERMINAL TRIGGERS 🌿` block at the bottom.
-
-```
-
-```
