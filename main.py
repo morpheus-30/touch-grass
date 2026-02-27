@@ -27,8 +27,8 @@ def play_braille_video(video_path, audio_path):
     except pygame.error:
         print(f"Error: Could not load audio file '{audio_path}'. Make sure it exists!")
         return
-    os.system('cls' if os.name == 'nt' else 'clear')
-    sys.stdout.write("\033[?25l")
+    sys.stdout.write("\033[?1049h\033[?25l\033[2J\033[H")
+    sys.stdout.flush()
     pygame.mixer.music.play()
     try:
         while True:
@@ -82,14 +82,17 @@ def play_braille_video(video_path, audio_path):
     finally:
         pygame.mixer.music.stop()
         cap.release()
-        sys.stdout.write("\033[?25h\033[0m")
+        
+        # 1. \033[?1049l = Exit Alternate Screen Buffer (restores previous terminal state)
+        # 2. \033[?25h = Restore Cursor
+        # 3. \033[0m = Reset terminal colors
+        sys.stdout.write("\033[?1049l\033[?25h\033[0m")
+        sys.stdout.flush()
+        
+        # We delete the print statement so it leaves zero trace that it was ever here!
         print("\n  [+] 🌿 Grass touched.\n  Still no bitches, still broken code.\n")
 if __name__ == "__main__":
-    # This automatically finds the exact folder where this Python script is saved
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    # It dynamically builds the full path to your media files
     video_file = os.path.join(script_dir, "grass.mp4") 
     audio_file = os.path.join(script_dir, "grass.mp3") 
-    
     play_braille_video(video_file, audio_file)
