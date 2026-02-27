@@ -27,8 +27,6 @@ Install the required Python libraries:
 pip3 install opencv-python numpy pygame
 ```
 
-````
-
 _Note: You must have a video file (`grass.mp4`) and an audio file (`grass.mp3`) in the repository folder before installing!_
 
 ## 🚀 Installation
@@ -72,4 +70,7 @@ To remove Touch Grass CLI from your system:
 
 1. Delete the hidden vault: `rm -rf ~/.touch-grass`
 2. Open your `~/.bashrc` or `~/.zshrc` and delete the `🌿 TOUCH GRASS TERMINAL TRIGGERS 🌿` block at the bottom.
-````
+
+```
+
+```
