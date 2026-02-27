@@ -1,8 +1,3 @@
-Here is a complete, GitHub-ready `README.md` tailored for maximum comedic impact and clear instructions. It perfectly sets up the joke while giving developers the exact steps they need to install it.
-
-Create a file named `README.md` in your project folder and paste this in:
-
-````markdown
 # 🌿 Touch Grass CLI
 
 **The most over-engineered mental health check for your terminal.**
@@ -31,6 +26,7 @@ Install the required Python libraries:
 ```bash
 pip3 install opencv-python numpy pygame
 ```
+
 ````
 
 _Note: You must have a video file (`grass_compressed.mp4`) and an audio file (`grass_audio.mp3`) in the repository folder before installing!_
@@ -76,3 +72,4 @@ To remove Touch Grass CLI from your system:
 
 1. Delete the hidden vault: `rm -rf ~/.touch-grass`
 2. Open your `~/.bashrc` or `~/.zshrc` and delete the `🌿 TOUCH GRASS TERMINAL TRIGGERS 🌿` block at the bottom.
+````
