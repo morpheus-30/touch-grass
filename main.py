@@ -82,14 +82,8 @@ def play_braille_video(video_path, audio_path):
     finally:
         pygame.mixer.music.stop()
         cap.release()
-        
-        # 1. \033[?1049l = Exit Alternate Screen Buffer (restores previous terminal state)
-        # 2. \033[?25h = Restore Cursor
-        # 3. \033[0m = Reset terminal colors
         sys.stdout.write("\033[?1049l\033[?25h\033[0m")
         sys.stdout.flush()
-        
-        # We delete the print statement so it leaves zero trace that it was ever here!
         print("\n  [+] 🌿 Grass touched.\n  Still no bitches, still broken code.\n")
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
