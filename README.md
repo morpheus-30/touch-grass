@@ -29,7 +29,7 @@ pip3 install opencv-python numpy pygame
 
 ````
 
-_Note: You must have a video file (`grass_compressed.mp4`) and an audio file (`grass_audio.mp3`) in the repository folder before installing!_
+_Note: You must have a video file (`grass.mp4`) and an audio file (`grass.mp3`) in the repository folder before installing!_
 
 ## 🚀 Installation
 
